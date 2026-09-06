@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #020403;
+  overflow: hidden;
+}
+
+#matrix {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+#scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.18) 2px,
+    rgba(0, 0, 0, 0.18) 3px
+  );
+  mix-blend-mode: multiply;
+}
+
+#terminal {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  font-family: "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #39ff6a;
+  text-shadow: 0 0 6px rgba(57, 255, 106, 0.55), 0 0 1px rgba(57, 255, 106, 0.9);
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+#terminal::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+#output > div {
+  margin-bottom: 2px;
+}
+
+#inputLine {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+#promptLabel {
+  color: #7dffb0;
+  margin-right: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#typed {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+#cursor {
+  animation: blink 1s steps(1) infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+#hiddenInput {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.line-dim { color: #1d8c44; }
+.line-bright { color: #b9ffd0; }
+.line-error { color: #ff5b5b; text-shadow: 0 0 6px rgba(255, 91, 91, 0.6); }
+.line-warn { color: #ffd95b; text-shadow: 0 0 6px rgba(255, 217, 91, 0.6); }

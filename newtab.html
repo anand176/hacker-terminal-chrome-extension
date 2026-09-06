@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div id="scanlines"></div>
+
+  <div id="terminal">
+    <div id="output"></div>
+    <div id="inputLine">
+      <span id="promptLabel">root@anonymous:~$</span>
+      <span id="typed"></span><span id="cursor">&#9608;</span>
+    </div>
+  </div>
+
+  <input id="hiddenInput" autocomplete="off" autocapitalize="off" spellcheck="false" />
+
+  <script src="script.js"></script>
+</body>
+</html>
