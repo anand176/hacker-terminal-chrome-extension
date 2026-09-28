@@ -26,7 +26,7 @@ and the extension requests zero permissions.
 - `clear` — clear the screen
 - `exit` — joke response (there's no escaping a new tab)
 
-Anything else returns a classic `command not found`.
+Anything else returns a classic `command not found`
 
 ## Publishing
 
