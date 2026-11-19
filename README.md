@@ -15,7 +15,7 @@ and the extension requests zero permissions.
 
 ## Commands you can type
 
-- `help` — list all commands
+- `help` — list all command
 - `whoami` — check your (fake) clearance level
 - `date` — current date/time
 - `ls` — list fake files
