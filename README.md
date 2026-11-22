@@ -11,7 +11,7 @@ and the extension requests zero permissions.
 2. Open `chrome://extensions`.
 3. Turn on **Developer mode** (top right toggle).
 4. Click **Load unpacked** and select the unzipped `hacker-terminal` folder.
-5. Open a new tab — the terminal boots automatically
+5. Open a new tab — the terminal boots automaticall
 
 ## Commands you can type
 
